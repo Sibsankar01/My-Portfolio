@@ -16,13 +16,13 @@
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: #6e93f7;
+    background: #2c2a52;
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #4070f4;
+    background: #2c2a52;
 }
 /* navbar styling */
 nav{
@@ -35,7 +35,7 @@ nav{
   background-color: #445a6626;
 }
 nav.sticky{
-  background: #4070f4;
+  background: #313d60;
   padding: 13px 0;
 }
 nav .navbar{
@@ -48,7 +48,12 @@ nav .navbar{
 nav .navbar .logo a{
   font-weight: 500;
   font-size: 35px;
-  color: #4070f4;
+  color: #ffffff;
+  text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
 }
 nav.sticky .navbar .logo a{
   color: #fff;
@@ -62,7 +67,7 @@ nav .navbar .menu li{
   margin: 0 8px;
 }
 .navbar .menu a{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: #0E2431;
   padding-left: 50px;
@@ -145,37 +150,41 @@ nav.sticky .menu-btn{
 }
 
 .info .text-one{
-  font-size: 30px;
+  font-size: 40px;
   color: #0E2431;
   font-family: "Maiandra GD";
   font-weight: 600;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
 }
 .info .text-two{
   color: #0E2431;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 600;
   margin-left: -3px;
   font-family: "Lucida Sans";
 }
 .info .text-twoo{
   color: #0E2431;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 600;
   margin-top: -10px;
   font-family: "Lucida Sans";
+  padding-bottom: 1%;
 }
 .info .text-three{
-  font-size: 40px;
+  font-size: 30px;
   margin: 5px 0;
   color: #4070f4;
   font-family: "Lucida Sans";
+  font-weight: 600;
 }
 .info .text-four{
   font-size: 23px;
   margin: 5px 0;
   color: #0E2431;
   font-family: "Lucida Sans";
+  font-weight: 600;
+  padding-bottom: 1%;
 }
 .home-content .content-left button{
   outline: none;
@@ -301,7 +310,7 @@ section button:hover{
 
  /* My Skills CSS */
  .skills{
-   background: #F0F8FF;
+   background: #d5fafe;
  }
  .skills .content{
    padding: 40px 0;
@@ -341,17 +350,63 @@ section button:hover{
   justify-content: space-between;
 }
 .skills-details .box{
-  width: calc(100% / 2 - 20px);
+  width: calc(100% / 3 - 20px);
   margin: 20px 0;
 }
 .skills-details .boxes .topic{
   font-size: 20px;
-  color: #4070f4;
+  color: #0e053a;
 }
 .skills-details .boxes .per{
   font-size: 60px;
+  color: #394463;
+}
+
+/* Internships CSS */
+.internship .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+.internship .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.internship .boxes .box:hover{
+  border: 2px solid #000;
+}
+/* .internship .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #4070f4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+} */
+.boxes .box:hover .icon{
+  background-color: #fff;
   color: #4070f4;
 }
+.internship .boxes .box:hover .topic,
+.internship .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+/* .internship .boxes .box:hover .topic,
+.internship .boxes .box:hover p{
+  color: #fff;
+} */
+
 
 /* My Project Sections */
 .card-list {
@@ -382,6 +437,8 @@ section button:hover{
   aspect-ratio: 18/9;
   border-radius: 8px;
   object-fit: cover;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.12);
+  
 }
 .card-list span {
   display: inline-block;
@@ -411,20 +468,6 @@ section button:hover{
   font-weight: 500;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.card-item .arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(-35deg);
-  height: 40px;
-  width: 40px;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 50%;
-  margin-top: 40px;
-  transition: 0.2s ease;
-  gap: 30px;
-}
 .card-item .last{
   display: flex;
 }
@@ -433,8 +476,7 @@ section button:hover{
   font-size: 20px;
   transform: none;
   color: rgb(0, 0, 0);
-  padding-left: 15px;
-  margin-top: 46px;
+  margin-top: 20px;
   font-weight: 500;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -471,7 +513,7 @@ section button:hover{
   transition: all 0.4s ease;
 }
 .services .boxes .box:hover{
-  background: #4070f4;
+  background: #1272ef;
   color: #fff;
 }
 .services .boxes .box .icon{
@@ -515,7 +557,7 @@ section button:hover{
 
 /* Footer CSS */
 footer{
-  background: #4070f4;
+  background: #313d60;
   padding: 15px 0;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -523,11 +565,11 @@ footer{
 footer .text span{
   font-size: 17px;
   font-weight: 400;
-  color: #fff;
+  color: #ffffff;
 }
 footer .text span a{
   font-weight: 500;
-  color: #FFF;
+  color: #ffffff;
 }
 footer .text span a:hover{
   text-decoration: underline;
